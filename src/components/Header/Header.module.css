@@ -7,6 +7,12 @@
     padding: 0.75rem;
     align-items: center;
     justify-content: space-around;
+
+    position: fixed;
+    top: 0;/*cola exatamento no topo*/
+    z-index: 1000;/*garante que ele vai ficar por cima doss filmes e do texto*/
+  
+
 }
 
 
