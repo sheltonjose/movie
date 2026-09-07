@@ -1,6 +1,6 @@
 .footer{
     position: absolute;  /*sempre fique na parte de baixo*/
-    bottom: 0;  
+      
     width: 100%;
     display: flex;
     align-items: center;
