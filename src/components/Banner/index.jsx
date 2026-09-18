@@ -1,10 +1,10 @@
 import styles from "./Banner.module.css"
 
-function Banner(){
+function Banner({image}){
      return(
         <div
              className={styles.banner}
-            style={{backgroundImage: "url('/images/banner-home.jpeg')" } }
+            style={{backgroundImage: `url('/images/banner-${image}.jpeg')` } }
          ></div>
      );
 }
