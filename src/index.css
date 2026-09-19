@@ -3,3 +3,11 @@ html, body, #root {
   padding: 0;
   height: 100%;
 }
+
+/*Formatação geral dos Cards*/
+.cards{
+  display: flex;
+  gap: 5px; /*Espaço entre os elementos*/
+  flex-wrap: wrap;
+  justify-content: center;
+}
