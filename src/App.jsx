@@ -13,11 +13,13 @@ function App() {
       <Banner image="Home" />
       <Container>
         <h2>Georgrafia</h2>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+       <section className="cards">
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+       </section>
      </Container>
       <Footer/>
       </>
