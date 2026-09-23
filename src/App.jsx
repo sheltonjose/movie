@@ -14,8 +14,7 @@ function App() {
       <Banner image="Home" />
       <Container>
 
-        <h2>Georgrafia</h2>
-
+      <h2>Georgrafia</h2>
        <section className="cards">  
         {
           Videos.map(video =>{
