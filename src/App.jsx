@@ -1,9 +1,22 @@
 import Banner from "./components/Banner"
 import Card from "./components/Card"
+import Category from "./components/Category"
 import Container from "./components/Container"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Videos  from "./JSON/videos.json"
+
+  const categories =[
+    "Geografia",
+    "Como fazer e usar",
+    "Astronomia e Geografia",
+    "Climatologia, Meteorologia, Vegetação",
+    "Geologia e Hidrografia"
+  ]
+
+  function filterCategory(id){
+    return Videos.filter(video =>video.category===categories[id])
+  }
 
 function App() {
 
@@ -14,7 +27,8 @@ function App() {
       <Banner image="Home" />
       <Container>
 
-      <h2>Georgrafia</h2>
+      {/*
+       <h2>Georgrafia</h2>
        <section className="cards">  
         {
           Videos.map(video =>{
@@ -22,6 +36,54 @@ function App() {
           })
         }
        </section>
+        */}
+
+
+      <Category category={categories[0]}>
+            {
+          filterCategory(0).map(video =>{
+            return <Card id={video.id} key={video.id}/>
+          })
+       }
+
+      </Category>
+
+      <Category category={categories[1]}>
+            {
+          filterCategory(1).map(video =>{
+            return <Card id={video.id} key={video.id}/>
+          })
+       }
+      </Category>
+      
+
+      <Category category={categories[2]}>
+            {
+          filterCategory(2).map(video =>{
+            return <Card id={video.id} key={video.id}/>
+          })
+       }
+      </Category>
+
+      <Category category={categories[3]}>
+            {
+          filterCategory(3).map(video =>{
+            return <Card id={video.id} key={video.id}/>
+          })
+       }
+      </Category>
+
+     <Category category={categories[4]}>
+            {
+          filterCategory(4).map(video =>{
+            return <Card id={video.id} key={video.id}/>
+          })
+       }
+      </Category>
+      
+
+       
+
 
      </Container>
       <Footer/>
