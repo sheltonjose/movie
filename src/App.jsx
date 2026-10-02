@@ -39,48 +39,28 @@ function App() {
         */}
 
 
-      <Category category={categories[0]}>
+     {
+      categories.map((category, index)=>
+           <Category category={category}>
             {
-          filterCategory(0).map(video =>{
+          filterCategory(index).map(video =>{
             return <Card id={video.id} key={video.id}/>
-          })
-       }
+              })
+           }
+         </Category>
+      )
+     }
 
-      </Category>
-
-      <Category category={categories[1]}>
+{/*
+       <Category category={categories[1]}>
             {
           filterCategory(1).map(video =>{
             return <Card id={video.id} key={video.id}/>
           })
        }
       </Category>
-      
+*/}
 
-      <Category category={categories[2]}>
-            {
-          filterCategory(2).map(video =>{
-            return <Card id={video.id} key={video.id}/>
-          })
-       }
-      </Category>
-
-      <Category category={categories[3]}>
-            {
-          filterCategory(3).map(video =>{
-            return <Card id={video.id} key={video.id}/>
-          })
-       }
-      </Category>
-
-     <Category category={categories[4]}>
-            {
-          filterCategory(4).map(video =>{
-            return <Card id={video.id} key={video.id}/>
-          })
-       }
-      </Category>
-      
 
        
 
