@@ -1,0 +1,67 @@
+import Banner from "../../components/Banner"
+import Card from "../../components/Card"
+import Category, {categories, filterCategory}from "../../components/Category"
+import Container from "../../components/Container"
+import Footer from "../../components/Footer"
+import Header from "../../components/Header"
+
+function Home() {
+
+
+  return (
+      <>
+      <Header/>
+      <Banner image="Home" />
+      <Container>
+
+      {/*
+       <h2>Georgrafia</h2>
+       <section className="cards">  
+        {
+          Videos.map(video =>{
+            return <Card id={video.id} key={video.id}/>
+          })
+        }
+       </section>
+        */}
+
+
+     {
+      categories.map((category, index)=>
+           <Category category={category}>
+            {
+          filterCategory(index).map(video =>{
+            return <Card id={video.id} key={video.id}/>
+              })
+           }
+         </Category>
+      )
+     }
+
+
+   
+
+
+
+{/*
+       <Category category={categories[1]}>
+            {
+          filterCategory(1).map(video =>{
+            return <Card id={video.id} key={video.id}/>
+          })
+       }
+      </Category>
+*/}
+
+
+       
+
+
+     </Container>
+    <Footer/>
+      </>
+    
+  )
+}
+
+export default Home
