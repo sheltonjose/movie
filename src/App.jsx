@@ -1,31 +1,21 @@
-import Banner from "./components/Banner"
+import Home from "./Pages/Home"
 import Card from "./components/Card"
-import Category from "./components/Category"
+import Category, {categories, filterCategory}from "./components/Category"
 import Container from "./components/Container"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
-import Videos  from "./JSON/videos.json"
-
-  const categories =[
-    "Geografia",
-    "Como fazer e usar",
-    "Astronomia e Geografia",
-    "Climatologia, Meteorologia, Vegetação",
-    "Geologia e Hidrografia"
-  ]
-
-  function filterCategory(id){
-    return Videos.filter(video =>video.category===categories[id])
-  }
+import AppRoutes from "./routes"
 
 function App() {
 
 
   return (
       <>
-      <Header/>
-      <Banner image="Home" />
-      <Container>
+      
+     
+      <AppRoutes/>
+
+     
 
       {/*
        <h2>Georgrafia</h2>
@@ -39,17 +29,14 @@ function App() {
         */}
 
 
-     {
-      categories.map((category, index)=>
-           <Category category={category}>
-            {
-          filterCategory(index).map(video =>{
-            return <Card id={video.id} key={video.id}/>
-              })
-           }
-         </Category>
-      )
-     }
+
+
+
+
+
+   
+
+
 
 {/*
        <Category category={categories[1]}>
@@ -65,8 +52,8 @@ function App() {
        
 
 
-     </Container>
-      <Footer/>
+     
+      
       </>
     
   )
