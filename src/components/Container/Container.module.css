@@ -1,6 +1,6 @@
 .container {
   width: 100%;     
-  
+  height: 100vh;
   /* Em vez de height: 100%, usamos min-height */
   /* Isto diz: "Ocupa no mínimo o ecrã todo, mas se tiver muitos filmes, podes esticar mais!" */
   min-height: 80vh; 
