@@ -14,9 +14,6 @@ import Videos  from "../../JSON/videos.json"
   }
 
 
-
-
-
 function Category({category, children}){
     return(
     
