@@ -6,3 +6,12 @@
     color: #fff;
     text-align: center;
 }
+
+.container h2{
+    padding-block: 1rem;
+}
+
+.container img{
+    height: 500px;
+    padding-bottom: 2rem;
+}
