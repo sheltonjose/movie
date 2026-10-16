@@ -8,7 +8,7 @@ function PageNotFound(){
             <>
             <Header/>
              <section className={styles.container}>
-                     <h2>Ops! Conteúdo não localizado</h2>
+                     <h2>Ops! Page not found</h2>
                     <img src={erro404} alt="Logo de Página não localizada"/>
              </section>
              <Footer/>
