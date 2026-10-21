@@ -3,12 +3,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styles from "./Watch.module.css"
 import { useParams } from "react-router-dom";
-import videos from "../../JSON/videos.json"
+import videos from "../../JSON/videos.json";
+import PageNotFound from "../PageNotFound";
 
 function Watch(){
     const params = useParams();
     const video = videos.find((video)=>{return video.id === params.id})
-    console.log(video)
+    if(!video){return <PageNotFound/>}
 
     return (
         <>
